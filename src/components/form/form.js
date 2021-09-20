@@ -1,5 +1,12 @@
 import React from 'react';
 import './form.scss';
+import { useState } from 'react';
+
+const [click, setclick] = useState();
+const [show, setShow] = useState();
+
+
+
 
  const handleSubmit = e => {
   e.preventDefault();
@@ -20,7 +27,10 @@ function Form(){
             <input name='url' type='text' />
             <button type="submit">GO!</button>
           </label>
-          <label className="methods">
+          <label onClick={(e)=>{
+            e.preventDefault()
+            
+          }} className="methods">
             <span id="get">GET</span>
             <span id="post">POST</span>
             <span id="put">PUT</span>
